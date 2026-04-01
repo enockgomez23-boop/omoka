@@ -1,0 +1,42 @@
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Timer Website</title>
+
+<style>
+body{
+background:black;
+color:white;
+text-align:center;
+font-family:Arial;
+margin-top:150px;
+}
+
+#timer{
+font-size:100px;
+font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>LIVE TIMER</h1>
+<div id="timer">0.00</div>
+
+<script>
+let start = Date.now();
+
+function updateTimer(){
+let now = Date.now();
+let seconds = (now - start)/1000;
+document.getElementById("timer").innerText = seconds.toFixed(2);
+}
+
+setInterval(updateTimer, 10);
+</script>
+
+</body>
+</html>
